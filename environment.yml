@@ -1,0 +1,15 @@
+name: tcell-perturbseq-targets
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - h5py
+  - fsspec
+  - aiohttp
+  - anndata
+  - requests
+  - pip

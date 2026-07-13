@@ -1,0 +1,5 @@
+statistic,scoring,drivers_vs_null,brakes_vs_null,mean_auroc
+z,mean_signed,0.956,0.742,0.849
+log_fc,correlation,0.919,0.766,0.8425
+z,correlation,0.942,0.737,0.8394999999999999
+log_fc,mean_signed,0.924,0.746,0.835

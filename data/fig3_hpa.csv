@@ -1,0 +1,3 @@
+gene,RNA_tissue_specificity,protein_tissue_specificity,RNA_blood_cell_specificity,blood_specific_nTPM,subcellular_main
+RSBN1L,Low tissue specificity,Tissue enhanced,Immune cell enhanced,"{""neutrophil"": ""54.6""}","[""Nuclear speckles""]"
+MAP3K1,Low tissue specificity,Group enriched,Low immune cell specificity,null,"[""Cytosol""]"
