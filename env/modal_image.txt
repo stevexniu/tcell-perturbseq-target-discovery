@@ -1,0 +1,5 @@
+# Modal CPU image used for the genome-scale discovery run (driver.py):
+modal.Image.debian_slim(python_version="3.11").pip_install(
+    "h5py==3.11.0", "pandas==2.2.2", "scipy==1.13.1", "numpy==1.26.4")
+# Resources: cpu=8, memory=32768 MB, timeout=7200 s
+# Inputs downloaded at runtime from the public S3 bucket (see DATA.md).

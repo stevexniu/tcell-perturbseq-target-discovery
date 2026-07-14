@@ -1,0 +1,41 @@
+slot,field,dtype,purpose,description,observed
+obs.index,index,string,reproducibility_key,AnnData obs index; observation key = {target_contrast}_{culture_condition}.,33983 unique keys
+obs,chunk,categorical (681 levels),reproducibility_key,Differential-expression processing group identifier.,0=50; 456=50; 448=50; 449=50
+obs,culture_condition,categorical (3 levels),reproducibility_key,"Culture condition (Rest, Stim8hr, Stim48hr).",Stim8hr=11415; Rest=11287; Stim48hr=11281
+obs,distal_offtarget_flag,bool,on_target_evidence,"Flag: potential distal off-target (TSS within 10kb of a predicted guide alignment site, with significant down-regulation).",433 True / 33983 (1.3%)
+obs,donor_correlation_all_mean,float64,reproducibility_concordance,Mean across disjoint donor-pair comparisons of Pearson r of per-gene DE log-fold-changes (all genes). NaN if not tested across donors.,non-null=4880; min=-0.167; median=0.111; max=0.729
+obs,donor_correlation_all_min,float64,reproducibility_concordance,Minimum across disjoint donor-pair comparisons of the same correlation.,non-null=4880; min=-0.314; median=0.0762; max=0.705
+obs,donor_correlation_hits_mean,float64,reproducibility_concordance,Mean cross-donor correlation restricted to per-target hit genes.,non-null=4880; min=-0.723; median=0.731; max=0.988
+obs,donor_correlation_hits_min,float64,reproducibility_concordance,Minimum cross-donor correlation on per-target hit genes.,non-null=4880; min=-0.771; median=0.676; max=0.983
+obs,guide_correlation_all,float64,reproducibility_concordance,"Pearson r between per-gene DE z-scores of the two guides, across all measured genes. NaN if not tested with two guides.",non-null=26040; min=-0.227; median=0.0648; max=0.714
+obs,guide_correlation_all_pval,float64,reproducibility_concordance,P-value for guide_correlation_all.,non-null=26040; min=0; median=3.87e-13; max=1
+obs,guide_correlation_signif,float64,reproducibility_concordance,"Pearson r between per-gene DE z-scores of the two guides, restricted to significant DE genes. NaN if not tested with two guides.",non-null=16147; min=-1; median=0.621; max=1
+obs,guide_correlation_signif_pval,float64,reproducibility_concordance,P-value for guide_correlation_signif.,non-null=16147; min=0; median=0.361; max=1
+obs,guide_n_signif_ontarget,float64,on_target_evidence,Number of guides for this target with significant on-target knockdown.,non-null=26040; min=0; median=2; max=2
+obs,low_target_gex,bool,on_target_evidence,Flag: target gene has low baseline expression (on-target KD estimate may be unreliable).,7806 True / 33983 (23.0%)
+obs,n_cells_target,float64,reproducibility_key,Number of cells with a targeting guide for the perturbed gene.,non-null=33983; min=17; median=539; max=1.15e+04
+obs,n_down_genes,int64,downstream_counts,Count of significantly DOWN-regulated genes (10% FDR).,non-null=33983; min=0; median=1; max=2.43e+03
+obs,n_downstream,int64,downstream_counts,Number of genes significantly affected excluding the on-target effect (incoming trans-effects).,non-null=33983; min=0; median=2; max=5.92e+03
+obs,n_guides,float64,reproducibility_key,Number of guides aggregated to produce the per-target DE estimate.,non-null=33980; min=1; median=2; max=3
+obs,n_total_de_genes,int64,downstream_counts,Total significantly DE genes (10% FDR).,non-null=33983; min=0; median=2; max=5.92e+03
+obs,n_total_genes_category,categorical (5 levels),downstream_counts,Category based on number of trans-effects.,2-10 DE genes=13767; 1 DE gene=7420; no effect=5226; >50 DE genes=4150
+obs,n_up_genes,int64,downstream_counts,Count of significantly UP-regulated genes (10% FDR).,non-null=33983; min=0; median=1; max=4.15e+03
+obs,neighboring_gene_KD,bool,on_target_evidence,Flag: a gene adjacent to the target locus is also significantly knocked down (potential cis off-target).,2619 True / 33983 (7.7%)
+obs,ontarget_effect_size,float64,on_target_evidence,Effect size of the perturbation on its intended target gene.,non-null=33983; min=-58.5; median=-6.3; max=7.09
+obs,ontarget_significant,bool,on_target_evidence,Flag: on-target knockdown was significant (10% FDR).,21221 True / 33983 (62.4%)
+obs,single_guide_estimate,bool,reproducibility_key,Flag: DE estimate produced from a single guide only.,3859 True / 33983 (11.4%)
+obs,target_baseMean,float64,on_target_evidence,Mean baseline expression of the target gene.,non-null=28133; min=0.0982; median=27.4; max=4.4e+03
+obs,target_contrast,categorical (11526 levels),reproducibility_key,Unique identifier (Ensembl gene ID) of the perturbed gene.,ENSG00000000003=3; ENSG00000166341=3; ENSG00000165912=3; ENSG00000165914=3
+obs,target_contrast_gene_name,categorical (11526 levels),reproducibility_key,Name of the perturbed gene.,A1BG=3; PRRC2A=3; PTS=3; PTTG1IP=3
+var,_index (gene index),string,gene_annotation,Measured-gene index.,10282 measured genes
+var,gene_ids,string,gene_annotation,Ensembl gene identifiers.,10282 measured genes
+var,gene_name,string,gene_annotation,Gene symbols.,10282 measured genes
+layers,log_fc,float64 (33983 x 10282),DE_statistic_matrix,Log2 fold change (DESeq2).,dense matrix
+layers,p_value,float64 (33983 x 10282),DE_statistic_matrix,Raw p-values.,dense matrix
+layers,adj_p_value,float64 (33983 x 10282),DE_statistic_matrix,FDR-adjusted p-values.,dense matrix
+layers,baseMean,float64 (33983 x 10282),DE_statistic_matrix,Mean normalized expression of the gene across cells.,dense matrix
+layers,lfcSE,float64 (33983 x 10282),DE_statistic_matrix,Standard error of log fold change.,dense matrix
+layers,zscore,float64 (33983 x 10282),DE_statistic_matrix,Z-scores (logFC / lfcSE).,dense matrix
+varm,measured_genes_stats_Rest,dataframe (per measured gene),gene_level_summary,"Per-gene incoming-regulator summary for this condition (columns: gene_name, culture_condition, n_up_regulators, n_down_regulators, n_regulators, expected_n_regulators_residuals).",10282 rows
+varm,measured_genes_stats_Stim8hr,dataframe (per measured gene),gene_level_summary,"Per-gene incoming-regulator summary for this condition (columns: gene_name, culture_condition, n_up_regulators, n_down_regulators, n_regulators, expected_n_regulators_residuals).",10282 rows
+varm,measured_genes_stats_Stim48hr,dataframe (per measured gene),gene_level_summary,"Per-gene incoming-regulator summary for this condition (columns: gene_name, culture_condition, n_up_regulators, n_down_regulators, n_regulators, expected_n_regulators_residuals).",10282 rows

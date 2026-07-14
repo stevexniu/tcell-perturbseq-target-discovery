@@ -1,7 +1,0 @@
-gene,direction,score,guide_repro,n_downstream,novelty,druggability,genetics
-CLCC1,autoimmune,-0.968,0.798,679,genuinely-new,hard,neutral
-MAP3K1,autoimmune,-0.867,0.672,89,recovered-known-broad,tractable-small-molecule,supports (with LoF-intolerance safety flag)
-WAS,autoimmune,-0.965,0.632,494,recovered-known-broad,hard,contradicts (X-linked Mendelian immune-dysregulation flag)
-RSBN1L,anti-tumor,0.554,1.0,178,genuinely-new,hard,supports
-MBTPS1,anti-tumor,0.451,0.923,279,recovered-known-broad,tractable-small-molecule,neutral
-PUM1,anti-tumor,0.524,0.999,226,partially-characterized,hard,neutral (strong haploinsufficiency safety flag)

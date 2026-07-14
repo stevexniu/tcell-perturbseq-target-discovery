@@ -1,4 +1,8 @@
 __pycache__/
 *.pyc
-.DS_Store
+.venv/
+out/
+/tmp/
 *.h5ad
+results/tables/*.regenerated.csv
+.DS_Store

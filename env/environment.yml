@@ -1,0 +1,12 @@
+name: tcell-target-discovery
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy=1.26
+  - pandas=2.2
+  - scipy=1.13
+  - scikit-learn
+  - matplotlib
+  - h5py=3.11
+  - s3fs
+  - pip

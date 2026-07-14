@@ -1,0 +1,15 @@
+gene,rna_tissue_specificity,rna_tissue_distribution,protein_tissue_specificity,rna_blood_specificity,protein_class
+TATDN2,Low tissue specificity,Detected in all,Tissue enriched,Low immune cell specificity,Predicted intracellular proteins
+JADE2,Low tissue specificity,Detected in all,Tissue enhanced,Low immune cell specificity,"Enzymes, Predicted intracellular proteins"
+URM1,Low tissue specificity,Detected in all,Tissue enhanced,Low immune cell specificity,"Essential proteins, Predicted intracellular proteins"
+BAHD1,Low tissue specificity,Detected in all,Tissue enriched,Low immune cell specificity,Predicted intracellular proteins
+INTS6,Low tissue specificity,Detected in all,Tissue enhanced,Low immune cell specificity,"Essential proteins, Predicted intracellular proteins"
+RAC2,Group enriched,Detected in many,Group enriched,Low immune cell specificity,"Disease related genes, Human disease related genes, Predicted intracellular proteins, RAS pathway related proteins"
+IFNAR1,Low tissue specificity,Detected in all,Not detected,Low immune cell specificity,"Cancer-related genes, Disease related genes, FDA approved drug targets, Plasma proteins, Predicted intracellular proteins, Predicted membrane proteins, Transporters"
+TNFRSF9,Tissue enhanced,Detected in some,Not detected,Group enriched,"Cancer-related genes, CD markers, Predicted intracellular proteins, Predicted membrane proteins, Transporters"
+CD6,Tissue enhanced,Detected in many,Group enriched,Group enriched,"CD markers, Predicted membrane proteins, Predicted secreted proteins"
+CBLB,Low tissue specificity,Detected in all,Tissue enriched,Low immune cell specificity,"Cancer-related genes, Enzymes, Metabolic proteins, Predicted intracellular proteins"
+TRIT1,Low tissue specificity,Detected in all,Tissue enriched,Low immune cell specificity,"Disease related genes, Enzymes, Human disease related genes, Metabolic proteins, Potential drug targets, Predicted intracellular proteins"
+SNRPB2,Low tissue specificity,Detected in all,Low tissue specificity,Low immune cell specificity,"Essential proteins, Plasma proteins, Predicted intracellular proteins"
+PAXIP1,Tissue enhanced,Detected in all,Tissue enhanced,Low immune cell specificity,Predicted intracellular proteins
+TWF1,Low tissue specificity,Detected in all,Low tissue specificity,Low immune cell specificity,"Disease related genes, Predicted intracellular proteins"
