@@ -1,0 +1,86 @@
+[
+  {
+    "severity": "resolved",
+    "location": "Fig 2 (fig2_ranking.png) \u2014 label stacks",
+    "status": "resolved",
+    "issue": "Prior inverted Fig-2 label stack is fixed. Th2 stack top->bottom IFNAR1>PAXIP1>TATDN2>TWF1>SNRPB2>TRIT1 tracks descending score (0.0738,0.0719,0.0715,0.0592,0.0510,0.0508); Th1 stack RAC2>INTS6>JADE2>BAHD1>URM1>TNFRSF9 tracks ascending magnitude (-0.056 to -0.088). Both monotone with point y-position; leader lines fan without crossing on perceptual inspection.",
+    "fix": "None needed \u2014 verified resolved."
+  },
+  {
+    "severity": "resolved",
+    "location": "summary_report.md \u00a73 + candidate_workup_report.md \u2014 CLCC1",
+    "status": "resolved",
+    "issue": "Prior missing 15th candidate is fixed. CLCC1 appears in the summary \u00a73 activation-exploratory bullet and in the explicit '15 worked-up candidates' list (activation-exploratory (3) CBLB, CD6, CLCC1), and has its own bullet in the detailed workup. Coverage table has all 15 including CLCC1.",
+    "fix": "None needed \u2014 verified resolved."
+  },
+  {
+    "severity": "medium",
+    "location": "summary_report.md \u00a73, CLCC1 bullet: 'among the more T-cell-specific hits (measured K562 concordance)'",
+    "status": "open",
+    "issue": "Contradicted by data. CLCC1 K562 concordance = 0.4769 (candidates_for_workup.csv) is the HIGHEST \u2014 i.e. LEAST T-cell-specific \u2014 of all 8 candidates with measured K562 data (rank 8/8; range 0.264 TATDN2 to 0.477 CLCC1). It passes the binary spec_call='T-cell-specific(measured)' filter but is the weakest of the measured set, so 'among the more T-cell-specific' overstates it. The detailed workup does NOT make this claim, only the summary does.",
+    "fix": "Reword to 'measured (K562 concordance 0.48 \u2014 the highest/least-specific of the measured set)' or drop the specificity qualifier. Low downstream impact: CLCC1 is explicitly not carried forward."
+  },
+  {
+    "severity": "minor",
+    "location": "summary_report.md Fig 3 caption: 'Knockdown direction is consistent across conditions.'",
+    "status": "open",
+    "issue": "Overstated for the panel as drawn. In Fig 3 panel C (and polar_score_by_condition.csv), CD6 flips sign Rest/Stim8h/Stim48h = +0.006/+0.030/-0.041 (visible as red->blue at 48h); INTS6 (-0.073/-0.058/+0.003) and TATDN2 (+0.038/+0.072/+0.001) decay through ~0 by 48h (INTS6 a marginal sign flip). The 12 polarization NOMINATIONS hold sign at 8h vs Rest, but the blanket caption covers all 14 rows shown, including CD6 which clearly flips.",
+    "fix": "Qualify: 'Direction is consistent across conditions for the polarization nominations; the exploratory activation gene CD6 flips sign by 48 h, and INTS6/TATDN2 decay to ~0.' "
+  },
+  {
+    "severity": "info",
+    "location": "coverage_table.csv / reports \u2014 INTS6, SNRPB2 novelty vs chembl_target_id",
+    "status": "open",
+    "issue": "INTS6 (chembl_target_id CHEMBL5724659) and SNRPB2 (CHEMBL5725125) are called 'genuinely-new' while carrying a registered ChEMBL target ID. This is honest, not an error: both have 0 known drugs, ~0-1 ligands, and the text qualifies 'genuinely-new (as a target)' / notes the registered-but-empty entry. Noted only so a reader doesn't read the ChEMBL ID as contradicting the novelty call.",
+    "fix": "No change required; the 'as a target / no mechanisms/drugs' qualifier already present is sufficient."
+  },
+  {
+    "severity": "clean",
+    "location": "Per-gene claims vs coverage_table.csv (novelty/druggability/genetics/safety) \u2014 all 15",
+    "status": "clean",
+    "issue": "Row-for-row match. Novelty calls (5 recovered-known TNFRSF9/CD6/IFNAR1/CBLB/RAC2; 9 genuinely-new; PAXIP1 partial), tractability classes, genetic_support levels, direction_of_effect, and safety_call all match report tables. No tractable/druggable label without has_PDB=True + known clinical drug; no genuinely-new label on a gene with drugs or non-zero drug programs.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Direction-of-effect logic (item 3)",
+    "status": "clean",
+    "issue": "CBLB direction_of_effect='risk-on-LoF' correctly mapped: LoF raises autoimmune risk -> desirable for brake-release/anti-tumor, liability for autoimmune (stated). IFNAR1 & CD6 'protective-on-LoF' correctly paired with approved antagonists (anifrolumab, itolizumab). KD-lowers/raises-axis to therapeutic-direction mapping is internally consistent.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Activation-axis weakness (item 5)",
+    "status": "clean",
+    "issue": "Failed validation (Spearman rho 0.13, AUROC 0.49, sign 76%) stated in summary \u00a71 table, \u00a73 activation header, \u00a74 point 4, all three activation bullets (CBLB/CD6/CLCC1 flagged exploratory), and Fig 1 right-panel title ('does not clear bar'). Consistently disclosed everywhere activation hits appear.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Aggregates 11/15 & 13/15 (item 6)",
+    "status": "clean",
+    "issue": "Reconcile exactly over all 15 incl. CLCC1: tractability 4 tractable / 7 challenging / 4 intractable => 11 challenging-to-intractable; safety 2 clean / 10 watch / 3 liability => 13 watch-or-liability. Gap census also checks: 4/15 no genetic support (CLCC1,INTS6,TATDN2,URM1), 7/15 no-K562-data.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Fig 1 (validation_scatter.png) \u2014 item 4",
+    "status": "clean",
+    "issue": "Panel titles show rho=0.72 (PASS) and rho=0.13 (does not clear bar), matching the \u00a71 table; n=3830 matched matches text. Known regulators (red) follow the trend on the polarization panel (correct rank order) and scatter with no trend on the activation panel. Axes labelled correctly.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Fig 2 (fig2_ranking.png) \u2014 item 4",
+    "status": "clean",
+    "issue": "Nominations highlighted by direction (blue Th1 x6, red Th2 x6 = 12 polarization noms), hubs greyed (legend present), knowns labelled '(known)' (IFNAR1/RAC2/TNFRSF9), y-axis direction annotated. No crossing leader lines (perceptual). Activation genes CD6/CBLB/CLCC1 correctly absent from this polarization plot.",
+    "fix": "None."
+  },
+  {
+    "severity": "clean",
+    "location": "Fig 3 panel C (fig3_leads.png) vs polar_score_by_condition.csv \u2014 item 4",
+    "status": "clean",
+    "issue": "All 14 rows x 3 conditions match the CSV to 2 dp (e.g. TNFRSF9 -0.10/-0.09/-0.07; IFNAR1 +0.03/+0.07/+0.06; TATDN2 +0.04/+0.07/+0.00; CD6 +0.01/+0.03/-0.04). Blue=Th1(neg)/red=Th2(pos) colormap correct. Asterisked recovered-known set (TNFRSF9,RAC2,IFNAR1,CBLB,CD6) matches report. CLCC1 absent from panel, consistent with CSV having 14 rows.",
+    "fix": "None."
+  }
+]

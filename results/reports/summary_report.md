@@ -40,7 +40,7 @@ From the validated axis, candidates were filtered with an explicit, documented c
 
 ![Leads up close — expression breadth vs polarization effect]({{artifact:223e8449-0bce-45e2-b26d-7913d442d30d}})
 
-*Figure 3. For each lead: (A) GTEx tissue expression, (B) HPA RNA specificity, (C) knockdown effect on the polarization axis across Rest / Stim8hr / Stim48hr. Recovered-known targets (* ) are immune-restricted (TNFRSF9, CD6); the novel intracellular hits are broadly expressed. Knockdown direction is consistent across conditions.*
+*Figure 3. For each lead: (A) GTEx tissue expression, (B) HPA RNA specificity, (C) knockdown effect on the polarization axis across Rest / Stim8hr / Stim48hr. Recovered-known targets (* ) are immune-restricted (TNFRSF9, CD6); the novel intracellular hits are broadly expressed. Knockdown direction is consistent across conditions for the polarization nominations; among the exploratory activation genes, CD6 flips sign by 48 h and INTS6/TATDN2 decay toward zero.*
 
 ---
 
@@ -72,7 +72,7 @@ This is the central finding and it is not hidden. The strongest, most-reproducib
 
 - **CBLB** — recovered-known canonical T-cell brake, active immuno-oncology target (Cbl-b inhibitors NCT05107674; 566 ChEMBL ligands), tractable E3 ligase. Genetics **risk-on-LoF** (hypothyroidism p=3e-41): loss of function *raises* autoimmune risk — consistent with its brake-release (anti-tumor) direction being desirable but an autoimmune liability. Confirmation of known biology on a failed axis, not a nomination.
 - **CD6** — recovered-known (itolizumab Ph3), immune-restricted, strong protective-on-LoF genetics (MS rs4939490 p=2e-29, IBD). A clean known target the exploratory axis re-finds.
-- **CLCC1** — genuinely-new chloride-channel-like protein; among the more T-cell-specific hits (measured K562 concordance) but no genetic support, challenging druggability (ion-channel-like membrane protein), and a safety watch on broad expression. Exploratory-axis hit only; not carried forward.
+- **CLCC1** — genuinely-new chloride-channel-like protein; passes the measured-specificity filter but is the weakest of the measured set (K562 concordance 0.48, highest/least-specific of the 8 measured candidates), with no genetic support, challenging druggability (ion-channel-like membrane protein), and a safety watch on broad expression. Exploratory-axis hit only; not carried forward.
 
 The 15 worked-up candidates are: Th1-skewing (6) TNFRSF9, RAC2, JADE2, BAHD1, INTS6, URM1; Th2-skewing (6) IFNAR1, TATDN2, TRIT1, TWF1, SNRPB2, PAXIP1; activation-exploratory (3) CBLB, CD6, CLCC1. The aggregate figures below are computed over all 15 (tractability: 4 tractable, 7 challenging, 4 intractable → 11 challenging-to-intractable; safety: 2 clean, 10 watch, 3 liability → 13 watch-or-liability).
 
